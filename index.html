@@ -28,14 +28,40 @@
               id="vNev"
               placeholder="Szerelem"
               name="vezeteknev"
-            />
+            /><br />
             <label for="kNev">Keresztnév:</label>
             <input
               type="text"
               id="kNev"
               placeholder="Bambínó"
               name="keresztnev"
+            /><br />
+            <input type="submit" value="Küldés" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Kedvenc dolgok</legend>
+            <label for="allat">Kedvenc állat:</label>
+            <input type="text" id="allat" placeholder="kutya" name="favallat" /><br />
+
+            <label for="favNumber">Kedvenc szám:</label>
+            <input
+              type="range"
+              id="favNumber"
+              value="50"
+              oninput="this.form.amountInput.value=this.value"
             />
+            <br>
+            <input
+              type="number"
+              name="amountInput"
+              min="0"
+              max="100"
+              value="50"
+              oninput="this.form.favNumber.value=this.value"
+            />
+            <br />
+
             <input type="submit" value="Küldés" />
           </fieldset>
         </form>

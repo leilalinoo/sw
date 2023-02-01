@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -16,23 +16,24 @@ main {
     "h h"
     "a n"
     "f f";
-    color: white;
+  color: white;
 }
 
 header {
   grid-area: h;
+  background-image: url(hatter.jpg);
 }
 
 nav {
   grid-area: n;
 }
-#menu ul{
-    list-style-type: none;
+#menu ul {
+  list-style-type: none;
 }
 
-#menu a{
-    color: aqua;
-    text-decoration: none;
+#menu a {
+  color: aqua;
+  text-decoration: none;
 }
 article {
   grid-area: auto;
@@ -56,12 +57,12 @@ footer {
   padding: 5px;
 }
 
-fieldset{
+fieldset {
   border: white 2px solid;
   margin: 15px;
   padding: 15px;
 }
-legend{
+legend {
   width: 30%;
   text-align: right;
   background-color: beige;
@@ -69,22 +70,38 @@ legend{
   border-radius: 5px;
   padding: 2px 30px;
 }
-label{
-  width: 30%;
+label {
+  width: 50%;
   float: left;
+  padding: 5px;
   margin-right: 20px;
 }
-input{
+input[type="text"] {
   padding: 5px;
+  margin: 10px;
+}
+input[type="submit"] {
+  width: auto;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  box-shadow: 5px 5px 5px 8px lightblue;
 }
 
-@media all and (max-width:1000px) {
+@media all and (max-width: 1000px) {
   main {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "h h"
+      "a n"
+      "f f";
+  }
+  legend {
+    width: auto;
   }
 }
 
-@media all and (max-width:700px) {
+@media all and (max-width: 700px) {
   main {
     grid-template-columns: 1fr;
     grid-template-areas:
